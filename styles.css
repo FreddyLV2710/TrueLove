@@ -42,6 +42,11 @@ h1 {
 
 .image-container {
     flex-shrink: 1;
+    
+}
+.image-container img {
+    max-width: 100%; /* Establece el ancho máximo al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la relación de aspecto */
 }
 
 img {

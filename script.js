@@ -25,3 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar la primera imagen al cargar la página
     images[currentIndex].style.display = 'block';
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    // Reproducir la música de fondo automáticamente al cargar la página
+    backgroundMusic.play();
+});
