@@ -28,6 +28,27 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const backgroundMusic = document.getElementById('backgroundMusic');
 
-    // Reproducir la música de fondo automáticamente al cargar la página
-    backgroundMusic.play();
+    // Reproducir la música de fondo automáticamente cuando el usuario interactúa
+    document.addEventListener('click', function() {
+        playBackgroundMusic();
+    });
+
+    // Función para reproducir la música de fondo
+    function playBackgroundMusic() {
+        // Verifica si el navegador permite la reproducción automática
+        const playPromise = backgroundMusic.play();
+
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                // La reproducción se inició correctamente
+            }).catch(error => {
+                // La reproducción no se pudo iniciar
+                console.error('Error al reproducir música:', error);
+            });
+        }
+    }
+
+    // Inicializar la reproducción de música
+    playBackgroundMusic();
 });
+
