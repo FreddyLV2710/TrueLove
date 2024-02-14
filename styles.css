@@ -60,10 +60,11 @@ img {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .spotify-player {
-    flex-shrink: 1;
-    width: 300px;
-    margin-left: 20px;
+
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    text-align: center; /* Centra el contenido horizontalmente */
 }
 .image-container img {
     display: none; /* Oculta todas las imágenes por defecto */
