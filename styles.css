@@ -54,3 +54,10 @@ img {
     width: 300px;
     margin-left: 20px;
 }
+.image-container img {
+    display: none; /* Oculta todas las imágenes por defecto */
+}
+
+.image-container img:first-child {
+    display: block; /* Muestra solo la primera imagen */
+}

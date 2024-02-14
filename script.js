@@ -1,12 +1,27 @@
-// Obtener la referencia a la imagen
-const romanticImage = document.querySelector('.image-container img');
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.image-container img');
+    let currentIndex = 0;
 
-// Agregar un evento de clic a la imagen
-romanticImage.addEventListener('click', function() {
-    // Cambiar la imagen al hacer clic
-    if (this.src.includes('imagen_romantica.jpg')) {
-        this.src = 'otra_imagen.jpg';
-    } else {
-        this.src = 'imagen_romantica.jpg';
+    // Función para cambiar la imagen al hacer clic
+    function changeImage() {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        images.forEach((image, index) => {
+            if (index === currentIndex) {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
     }
+
+    // Agregar evento de clic a cada imagen
+    images.forEach(image => {
+        image.addEventListener('click', changeImage);
+    });
+
+    // Mostrar la primera imagen al cargar la página
+    images[currentIndex].style.display = 'block';
 });
