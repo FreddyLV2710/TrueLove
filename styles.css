@@ -13,6 +13,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+.image-container img {
+    max-width: 100%; /* Establece el ancho máximo al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la relación de aspecto */
+    display: block; /* Asegura que las imágenes sean elementos de bloque */
+    margin: auto; /* Centra las imágenes horizontalmente */
+}
 
 .header {
     text-align: center;
